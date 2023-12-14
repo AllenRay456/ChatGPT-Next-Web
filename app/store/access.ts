@@ -77,7 +77,13 @@ export const useAccessStore = createPersistStore(
           ...getHeaders(),
         },
       })
-        .then((res) => res.json())
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          } else {
+            window.location.href = "/login";
+          }
+        })
         .then((res: DangerConfig) => {
           console.log("[Config] got config from server", res);
           set(() => ({ ...res }));

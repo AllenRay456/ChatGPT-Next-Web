@@ -68,7 +68,7 @@ export const ALL_LANG_OPTIONS: Record<Lang, string> = {
 };
 
 const LANG_KEY = "lang";
-const DEFAULT_LANG = "en";
+const DEFAULT_LANG = "cn";
 
 const fallbackLang = en;
 const targetLang = ALL_LANGS[getLang()] as LocaleType;
@@ -93,11 +93,12 @@ function setItem(key: string, value: string) {
 }
 
 function getLanguage() {
-  try {
-    return navigator.language.toLowerCase();
-  } catch {
-    return DEFAULT_LANG;
-  }
+  // try {
+  //   return navigator.language.toLowerCase();
+  // } catch {
+  //   return DEFAULT_LANG;
+  // }
+  return DEFAULT_LANG;
 }
 
 export function getLang(): Lang {

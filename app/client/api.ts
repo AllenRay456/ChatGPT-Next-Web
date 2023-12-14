@@ -125,11 +125,18 @@ export class ClientApi {
 
 export const api = new ClientApi();
 
+let token: string | null = null;
+
+// 确保代码运行在客户端
+if (typeof window !== "undefined") {
+  token = localStorage.getItem("token");
+}
 export function getHeaders() {
   const accessStore = useAccessStore.getState();
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
     "x-requested-with": "XMLHttpRequest",
+    Authorization: `Bearer ${token}`,
   };
 
   const isAzure = accessStore.provider === ServiceProvider.Azure;

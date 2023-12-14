@@ -2,6 +2,8 @@ import { NextRequest } from "next/server";
 import { getServerSideConfig } from "../config/server";
 import md5 from "spark-md5";
 import { ACCESS_CODE_PREFIX } from "../constant";
+// import jwt from "jsonwebtoken";
+// import { jwtVerify } from "jose";
 
 function getIP(req: NextRequest) {
   let ip = req.ip ?? req.headers.get("x-real-ip");
@@ -24,8 +26,37 @@ function parseApiKey(bearToken: string) {
   };
 }
 
-export function auth(req: NextRequest) {
-  const authToken = req.headers.get("Authorization") ?? "";
+export async function auth(req: NextRequest) {
+  // const loginAuthToken = re、q.headers.get("Authorization") ?? "";
+  // try {
+  //   const payload = jwt.verify(loginAuthToken, process.env.JWT_SECRET!);
+  // } catch (error) {
+  //   return {
+  //     error: true,
+  //     msg: 'token expired',
+  //   };
+  // }
+  // try {
+  //   const { payload } = await jwtVerify(
+  //     loginAuthToken,
+  //     new TextEncoder().encode(process.env.JWT_SECRET),
+  //   );
+
+  //   if (Date.now() >= payload.exp! * 1000) {
+  //     return {
+  //       error: true,
+  //       msg: "toke 过期",
+  //     };
+  //   }
+  // } catch (error) {
+  //   console.log(error, 111111);
+  //   return {
+  //     error: true,
+  //     msg: "toke 过期",
+  //   };
+  // }
+
+  const authToken = "";
 
   // check if it is openai api key or user token
   const { accessCode, apiKey } = parseApiKey(authToken);
