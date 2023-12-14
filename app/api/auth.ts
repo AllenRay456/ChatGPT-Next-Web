@@ -26,7 +26,7 @@ function parseApiKey(bearToken: string) {
   };
 }
 
-export async function auth(req: NextRequest) {
+export function auth(req: NextRequest) {
   // const loginAuthToken = re、q.headers.get("Authorization") ?? "";
   // try {
   //   const payload = jwt.verify(loginAuthToken, process.env.JWT_SECRET!);
