@@ -316,10 +316,15 @@
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
+  align-items: end;
 }
 
 .sidebar-actions {
   display: inline-flex;
+  .sidebar-link {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .sidebar-action:not(:last-child) {

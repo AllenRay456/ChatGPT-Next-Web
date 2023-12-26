@@ -3,7 +3,9 @@ import { useEffect, useRef, useMemo } from "react";
 import styles from "./home.module.scss";
 
 import { IconButton } from "./button";
-import SettingsIcon from "../icons/settings.svg";
+// import SettingsIcon from "../icons/settings.svg";
+import MosaicIcon from "../icons/mosaic.svg";
+import ShopIcon from "../icons/shop.svg";
 import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
 import AddIcon from "../icons/add.svg";
@@ -155,11 +157,9 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          NextChat
+          畅享ChatGPT3.5
         </div>
-        <div className={styles["sidebar-sub-title"]}>
-          Build your own AI assistant.
-        </div>
+        <div className={styles["sidebar-sub-title"]}>先进个人，先用 AI</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
         </div>
@@ -212,13 +212,23 @@ export function SideBar(props: { className?: string }) {
             />
           </div>
           <div className={styles["sidebar-action"]}>
-            <Link to={Path.Settings}>
-              <IconButton icon={<SettingsIcon />} shadow />
-            </Link>
+            <a
+              href={"https://mosaic.xnewstar.com"}
+              target="_blank"
+              className={styles["sidebar-link"]}
+            >
+              <p>AI特刊</p>
+              <IconButton icon={<MosaicIcon />} shadow />
+            </a>
           </div>
           <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
-              <IconButton icon={<GithubIcon />} shadow />
+            <a
+              href={"https://shop.xnewstar.com"}
+              target="_blank"
+              className={styles["sidebar-link"]}
+            >
+              <p>GPT4账号</p>
+              <IconButton icon={<ShopIcon />} shadow />
             </a>
           </div>
         </div>
