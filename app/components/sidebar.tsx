@@ -161,6 +161,9 @@ export function SideBar(props: { className?: string }) {
           畅享ChatGPT
         </div>
         <div className={styles["sidebar-sub-title"]}>先进个人，先用 AI</div>
+        <div className={styles["sidebar-sub-title"]}>
+          更多AI工具如gpt4加vx共享群
+        </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <Image src="/vxgroup.png" alt="微信群聊" width={60} height={60} />
         </div>
