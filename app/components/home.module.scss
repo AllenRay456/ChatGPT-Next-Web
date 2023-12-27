@@ -324,6 +324,11 @@
   .sidebar-link {
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    .sidebar-site {
+      margin: 5px auto;
+      color: #0969da;
+    }
   }
 }
 

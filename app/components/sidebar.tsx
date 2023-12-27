@@ -1,6 +1,7 @@
 import { useEffect, useRef, useMemo } from "react";
 
 import styles from "./home.module.scss";
+import Image from "next/image";
 
 import { IconButton } from "./button";
 // import SettingsIcon from "../icons/settings.svg";
@@ -157,16 +158,16 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          畅享ChatGPT3.5
+          畅享ChatGPT
         </div>
         <div className={styles["sidebar-sub-title"]}>先进个人，先用 AI</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <ChatGptIcon />
+          <Image src="/vxgroup.png" alt="微信群聊" width={60} height={60} />
         </div>
       </div>
 
       <div className={styles["sidebar-header-bar"]}>
-        <IconButton
+        {/* <IconButton
           icon={<MaskIcon />}
           text={shouldNarrow ? undefined : Locale.Mask.Name}
           className={styles["sidebar-bar-button"]}
@@ -178,14 +179,14 @@ export function SideBar(props: { className?: string }) {
             }
           }}
           shadow
-        />
-        <IconButton
+        /> */}
+        {/* <IconButton
           icon={<PluginIcon />}
           text={shouldNarrow ? undefined : Locale.Plugin.Name}
           className={styles["sidebar-bar-button"]}
           onClick={() => showToast(Locale.WIP)}
           shadow
-        />
+        /> */}
       </div>
 
       <div
@@ -217,7 +218,7 @@ export function SideBar(props: { className?: string }) {
               target="_blank"
               className={styles["sidebar-link"]}
             >
-              <p>AI特刊</p>
+              <p className={styles["sidebar-site"]}>AI特刊</p>
               <IconButton icon={<MosaicIcon />} shadow />
             </a>
           </div>
@@ -227,7 +228,7 @@ export function SideBar(props: { className?: string }) {
               target="_blank"
               className={styles["sidebar-link"]}
             >
-              <p>GPT4账号</p>
+              <p className={styles["sidebar-site"]}>GPT4账号</p>
               <IconButton icon={<ShopIcon />} shadow />
             </a>
           </div>
