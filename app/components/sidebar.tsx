@@ -7,6 +7,7 @@ import { IconButton } from "./button";
 // import SettingsIcon from "../icons/settings.svg";
 import MosaicIcon from "../icons/mosaic.svg";
 import ShopIcon from "../icons/shop.svg";
+import GeminiIcon from "../icons/gemini.svg";
 import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
 import AddIcon from "../icons/add.svg";
@@ -163,9 +164,7 @@ export function SideBar(props: { className?: string }) {
         <div className={styles["sidebar-sub-title"]}>先进个人，先用 AI</div>
         <div className={styles["sidebar-sub-title"]}>更多AI共享加 VX 群 👉</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <video width={100} height={100} autoPlay muted loop>
-            <source src="/vxgroup.mp4" type="video/mp4"></source>
-          </video>
+          <Image src="/vxgroup2.png" alt="微信群聊" width={100} height={100} />
         </div>
       </div>
 
@@ -231,7 +230,7 @@ export function SideBar(props: { className?: string }) {
               target="_blank"
               className={styles["sidebar-link"]}
             >
-              <p className={styles["sidebar-site"]}>GPT4账号</p>
+              <p className={styles["sidebar-site"]}>GPT4</p>
               <IconButton icon={<ShopIcon />} shadow />
             </a>
           </div>
@@ -241,15 +240,16 @@ export function SideBar(props: { className?: string }) {
               target="_blank"
               className={styles["sidebar-link"]}
             >
-              <p className={styles["sidebar-site"]}>Google Gemini</p>
-              <IconButton icon={<ShopIcon />} shadow />
+              <p className={styles["sidebar-site"]}>Gemini</p>
+              <IconButton icon={<GeminiIcon />} shadow />
             </a>
           </div>
         </div>
         <div>
           <IconButton
             icon={<AddIcon />}
-            text={shouldNarrow ? undefined : Locale.Home.NewChat}
+            // text={shouldNarrow ? undefined : Locale.Home.NewChat}
+            text={shouldNarrow ? undefined : "会话"}
             onClick={() => {
               if (config.dontShowMaskSplashScreen) {
                 chatStore.newSession();
