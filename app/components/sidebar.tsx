@@ -161,11 +161,11 @@ export function SideBar(props: { className?: string }) {
           畅享ChatGPT
         </div>
         <div className={styles["sidebar-sub-title"]}>先进个人，先用 AI</div>
-        <div className={styles["sidebar-sub-title"]}>
-          更多AI工具如gpt4加vx共享群
-        </div>
+        <div className={styles["sidebar-sub-title"]}>更多AI共享加 VX 群 👉</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <Image src="/vxgroup.png" alt="微信群聊" width={60} height={60} />
+          <video width={100} height={100} autoPlay muted loop>
+            <source src="/vxgroup.mp4" type="video/mp4"></source>
+          </video>
         </div>
       </div>
 
@@ -232,6 +232,16 @@ export function SideBar(props: { className?: string }) {
               className={styles["sidebar-link"]}
             >
               <p className={styles["sidebar-site"]}>GPT4账号</p>
+              <IconButton icon={<ShopIcon />} shadow />
+            </a>
+          </div>
+          <div className={styles["sidebar-action"]}>
+            <a
+              href={"https://gemini.xnewstar.com"}
+              target="_blank"
+              className={styles["sidebar-link"]}
+            >
+              <p className={styles["sidebar-site"]}>Google Gemini</p>
               <IconButton icon={<ShopIcon />} shadow />
             </a>
           </div>
