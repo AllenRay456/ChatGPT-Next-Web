@@ -164,7 +164,12 @@ export function SideBar(props: { className?: string }) {
         <div className={styles["sidebar-sub-title"]}>先进个人，先用 AI</div>
         <div className={styles["sidebar-sub-title"]}>更多AI共享加 VX 群 👉</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <Image src="/vxgroup2.png" alt="微信群聊" width={100} height={100} />
+          <Image
+            src={process.env.NEXT_PUBLIC_VX_QR!}
+            alt="微信群聊"
+            width={100}
+            height={100}
+          />
         </div>
       </div>
 
