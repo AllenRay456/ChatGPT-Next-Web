@@ -6,7 +6,7 @@ import Image from "next/image";
 import { IconButton } from "./button";
 // import SettingsIcon from "../icons/settings.svg";
 import MosaicIcon from "../icons/mosaic.svg";
-import ShopIcon from "../icons/shop.svg";
+import ZhinanzhenIcon from "../icons/zhinazhen.svg";
 import GeminiIcon from "../icons/gemini.svg";
 import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
@@ -159,10 +159,10 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          畅享ChatGPT
+          畅聊ChatGPT
         </div>
-        <div className={styles["sidebar-sub-title"]}>先进个人，先用 AI</div>
-        <div className={styles["sidebar-sub-title"]}>更多AI共享加 VX 群 👉</div>
+        <div className={styles["sidebar-sub-title"]}>人人都能享受AI乐趣</div>
+        <div className={styles["sidebar-sub-title"]}>更多共享 加VX群 👉</div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <Image
             src={process.env.NEXT_PUBLIC_VX_QR!}
@@ -231,12 +231,12 @@ export function SideBar(props: { className?: string }) {
           </div>
           <div className={styles["sidebar-action"]}>
             <a
-              href={"https://shop.xnewstar.com"}
+              href={"https://toolbox.xnewstar.com"}
               target="_blank"
               className={styles["sidebar-link"]}
             >
-              <p className={styles["sidebar-site"]}>GPT4</p>
-              <IconButton icon={<ShopIcon />} shadow />
+              <p className={styles["sidebar-site"]}>AI导航</p>
+              <IconButton icon={<ZhinanzhenIcon />} shadow />
             </a>
           </div>
           <div className={styles["sidebar-action"]}>

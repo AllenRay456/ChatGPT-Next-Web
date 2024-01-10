@@ -7,7 +7,7 @@ import { type Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "畅聊chatgpt",
-  description: "免费又好用的chatgpt,无需API key, 开箱即用！",
+  description: "免费又好用的chatgpt,无需API key, 开箱即用，就在畅聊chatgpt！",
   viewport: {
     width: "device-width",
     initialScale: 1,
